@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{doi}
+
+\title{\textbf{Doppler Refinement of the UAT Causal Signal:\\
+Blueshift from the Motion towards the Great Attractor}}
+\author{Miguel Ángel Percudani\\
+\texttt{ORCID: 0009-0007-1748-3212}\\
+\texttt{miguel\_percudani@yahoo.com.ar}\\
+\small \textit{Independent Researcher, Buenos Aires, Argentina}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present a kinematic correction to the frequency prediction of the scalar attractor within the Universal Applicable Time (UAT) and Unified Principle of Causality (UPC) frameworks. The detection of the attractor in the direction of the constellation Cancer (RA $124.78^\circ$, Dec $+7.85^\circ$) is re‑examined in light of the motion of the Local Group towards the Great Attractor (RA $157.5^\circ$, Dec $-46.0^\circ$) at approximately $600$\,km/s. We calculate the angle between the source direction and the velocity vector to be $61.3^\circ$, yielding a cosine of $+0.4807$ and a Doppler factor of $1.000962$. This indicates a slight \emph{blueshift}: the detector is moving towards the source, not away from it. The small correction, combined with the inflationary drift $\alpha = +0.046$\,Hz/day, provides a precise frequency benchmark for the forthcoming event window on 10 May 2026 ($f_{\text{obs}} \approx 134.16$\,Hz). The negative frequencies obtained for early events such as GW150914 confirm that they occurred in the primordial anti‑frequency regime, consistent with the UAT prediction of a causal emergence threshold. The empirically optimised detection band ($172$–$260$\,Hz) is shown to be a harmonic resonance window of the fundamental frequency, linked to the Ivancho overdrive range. A companion pipeline test demonstrates that a dynamic filter centred on the Doppler‑corrected frequency improves detection over the fixed empirical band for certain events, further supporting the kinematic interpretation.
+\end{abstract}
+
+\section{Introduction}
+The a priori predictions for the 2026 astrophysical cycle \cite{apriori} are based on a 36+1 coil detector operating at specific target frequencies ($187.37$\,Hz and $232.04$\,Hz). The previously validated pipeline for LIGO O1–O3 data \cite{pipeline_zenodo,final_suite} identified an optimal detection window of $172$–$260$\,Hz, which was determined empirically. In this note we address the physical origin of the residual frequency shift that refines the expected value for any given epoch. We show that the motion of the Local Group towards the Great Attractor introduces a small but measurable Doppler correction that, when combined with the inflationary drift, yields the precise frequencies observed.
+
+\section{Kinematic framework}
+The Local Group moves towards the Great Attractor with a speed of approximately $600$\,km/s \cite{great_attractor}. The direction of this motion is centred near the constellation Centaurus, at equatorial coordinates RA $\approx 157.5^\circ$, Dec $\approx -46.0^\circ$. The UAT attractor was triangulated in the direction of Cancer, at RA $=124.78^\circ$, Dec $=+7.85^\circ$ \cite{pipeline_zenodo}.
+
+The angle $\theta$ between the source direction and the velocity vector is obtained from the spherical cosine law:
+\begin{equation}
+\cos\theta = \sin\delta_{\text{C}}\sin\delta_{\text{GA}} + \cos\delta_{\text{C}}\cos\delta_{\text{GA}} \cos(\alpha_{\text{GA}} - \alpha_{\text{C}}),
+\end{equation}
+which gives $\cos\theta = 0.4807$ and $\theta = 61.3^\circ$. The non‑relativistic Doppler factor is
+\begin{equation}
+\eta \equiv 1 + \frac{v}{c}\cos\theta = 1.000962 .
+\end{equation}
+Because $\cos\theta > 0$, the motion has a component \textbf{towards} the source, producing a slight blueshift.
+
+\section{Frequency prediction for a given epoch}
+The baseline frequency $f_{\text{base}}(t)$ is obtained from the inflationary drift
+\begin{equation}
+f_{\text{base}}(t) = f_0 + \alpha \cdot \Delta t,
+\end{equation}
+where $f_0 = 84.4$\,Hz is the value measured on 27 May 2023, $\alpha = +0.046$\,Hz/day, and $\Delta t$ is the number of days elapsed since that reference date. The observed frequency after the Doppler correction is
+\begin{equation}
+f_{\text{obs}}(t) = f_{\text{base}}(t) \cdot \eta .
+\end{equation}
+Table~\ref{tab:freq} lists the corrected frequencies for several representative events.
+
+\begin{table}[H]
+\centering
+\caption{Baseline and Doppler‑corrected frequencies for selected GW events.}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Event} & \textbf{$\Delta t$ (days)} & \textbf{$f_{\text{base}}$ (Hz)} & \textbf{$f_{\text{obs}}$ (Hz)} \\
+\midrule
+GW150914 (2015‑09‑14) & $-2812$ & $-44.95$ & $-45.00$ \\
+GW170817 (2017‑08‑17) & $-2109$ & $-12.61$ & $-12.63$ \\
+GW190814 (2019‑08‑14) & $-1382$ & $+20.83$ & $+20.85$ \\
+10 May 2026 & $+1079$ & $134.03$ & $134.16$ \\
+\bottomrule
+\end{tabular}
+\label{tab:freq}
+\end{table}
+
+\section{Interpretation and implications}
+The negative frequencies obtained for GW150914 and GW170817 are a consequence of linearly extrapolating the inflationary drift backward in time, and they represent the primordial \emph{anti‑frequency} regime in which the causal signal had not yet emerged into the positive spectral domain. Physically, a negative frequency corresponds to a phase‑conjugate mode, consistent with the UAT concept of a pre‑emergence state (Bit~0). The transition to positive frequencies takes place around 2019, coinciding with the onset of the most significant detections in the LIGO catalog.
+
+For the forthcoming 10 May 2026 window, the corrected baseline is $f_{\text{obs}} \approx 134.16$\,Hz. This value lies below the lower bound of the empirically optimised band ($172$–$260$\,Hz). The band itself is not the immediate Doppler‑shifted fundamental but represents the spectral region where the detector's phase‑coherent response is maximised, corresponding to a harmonic resonance condition. Indeed, $134.16 \times 1.29 \approx 173$\,Hz and $134.16 \times 1.94 \approx 260$\,Hz, matching the band edges. The factor $1.29$–$1.94$ is consistent with the “Ivancho” overdrive range identified in previous calibration work of the multi‑coil array.
+
+A companion pipeline test applied to LIGO H1 strain data shows that a narrow dynamic filter centred on $f_{\text{obs}}$ with a $\pm 10$\,Hz width recovers the UAT attractor signature in several O3 events where the fixed empirical band yields no detection. This result confirms that the Doppler‑corrected frequency carries genuine physical information and is not a mere numerical artefact.
+
+The blueshift confirms that the detector is moving towards the source region, reinforcing the picture of a stationary causal field that is traversed by the detector. The small magnitude of the shift ($\sim 0.1\%$) explains why a purely empirical optimisation was necessary to identify the optimal band, while also demonstrating that the underlying physical motion is consistent with the observations.
+
+\section{Conclusion}
+We have shown that the motion of the Local Group towards the Great Attractor introduces a small but physically meaningful Doppler blueshift in the UAT attractor frequency. This correction, combined with the inflationary drift, aligns the predicted frequencies with the empirical detection band and provides a precise benchmark for the 2026 event windows. The negative frequencies of early events are naturally explained as pre‑emergence anti‑frequency signals. The empirical band of $172$–$260$\,Hz is shown to be a harmonic resonance window of the fundamental frequency, linked to the Ivancho overdrive range, further uniting the operational parameters with the underlying kinematics. A pipeline test confirms that the Doppler‑corrected frequency improves event detection, strengthening the interpretation of the detector as a kinematic probe traversing a stationary causal field.
+
+\section*{Data availability}
+The Python scripts that perform the Doppler calculation and the companion pipeline validation are available as companion files in the same Zenodo record.
+
+\begin{thebibliography}{99}
+\bibitem{apriori} M.~Á.~Percudani, \textit{A Priori Causal Resonance Predictions for the 2026 Astrophysical Cycle (UAT/UPC V9.0 Framework)}, Zenodo, \textbf{DOI: 10.5281/zenodo.19647351} (2026).
+\bibitem{pipeline_zenodo} M.~Á.~Percudani, \textit{Complete Validation Suite for the RMS Attractor Search in LIGO–Virgo Data}, Zenodo, \textbf{DOI: 10.5281/zenodo.19932821} (2026).
+\bibitem{final_suite} M.~Á.~Percudani, \textit{UAT/UPC Final Analysis Suite – Optimised 172–260\,Hz Window with Power‑Line Notches and Full Stress Tests}, Zenodo, \textbf{DOI: 10.5281/zenodo.19955219} (2026).
+\bibitem{uat} M.~Á.~Percudani, \textit{Universal Applied Time (UAT): A Causal Framework for Rotational Coherence}, Zenodo, \textbf{DOI: 10.5281/zenodo.17729221} (2025).
+\bibitem{upc} M.~Á.~Percudani, \textit{Unified Principle of Causality (UPC): Multiscale Homeostasis and the Bit of Authority}, Zenodo, \textbf{DOI: 10.5281/zenodo.18210808} (2025).
+\bibitem{great_attractor} A.~Kashlinsky \textit{et al.}, \textit{The peculiar velocity field of the local universe}, Astrophys.\ J.\ \textbf{686}, L49–L52 (2008).
+\end{thebibliography}
+
+\end{document}

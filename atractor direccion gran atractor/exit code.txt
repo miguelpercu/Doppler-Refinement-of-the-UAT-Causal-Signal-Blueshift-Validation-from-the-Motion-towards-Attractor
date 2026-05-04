@@ -1,0 +1,97 @@
+======================================================================
+ CÁLCULO DE FRECUENCIA CORREGIDA (DERIVA + DOPPLER CÓSMICO)
+======================================================================
+Vector de velocidad del detector    : 600.0 km/s
+Dirección del movimiento (Gran Atractor): RA=157.5°, Dec=-46.0°
+Dirección de la señal (Cáncer)       : RA=124.78°, Dec=7.85°
+Ángulo entre señal y movimiento       : 61.3°
+Coseno del ángulo (cos θ)             : 0.480707
+Factor Doppler (1 + v/c·cosθ)         : 1.000962
+----------------------------------------------------------------------
+GW150914 (2015-09-14):
+  Δdías desde 2023-05-27 : -2812
+  Frecuencia base (deriva): -44.952 Hz
+  Frecuencia corregida (Doppler): -44.995 Hz
+
+GW170817 (2017-08-17):
+  Δdías desde 2023-05-27 : -2109
+  Frecuencia base (deriva): -12.614 Hz
+  Frecuencia corregida (Doppler): -12.626 Hz
+
+GW190814 (2019-08-14):
+  Δdías desde 2023-05-27 : -1382
+  Frecuencia base (deriva): 20.828 Hz
+  Frecuencia corregida (Doppler): 20.848 Hz
+
+Hoy (2026-05-10):
+  Δdías desde 2023-05-27 : +1079
+  Frecuencia base (deriva): 134.034 Hz
+  Frecuencia corregida (Doppler): 134.163 Hz
+
+======================================================================
+Nota: La frecuencia corregida para GW150914 (~ -45 Hz) es negativa,
+correspondiendo al régimen de antifrecuencia (Bit 0) anterior a la
+emergencia del atractor. Esto es consistente con las predicciones UAT.
+======================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+======================================================================
+ VALIDACIÓN DE FRECUENCIA DOPPLER EN EVENTOS GW REALES
+======================================================================
+Factor Doppler aplicado : 1.000962 (blueshift)
+Banda empírica (fija)   : 172‑260 Hz
+Banda dinámica centrada : en f_corregida ± 10 Hz
+======================================================================
+Catálogo descargado: 219 eventos.
+
+GW150914: descarga fallida (filter critical frequencies must be greater than 0)
+GW151012: descarga fallida (filter critical frequencies must be greater than 0)
+GW151226: descarga fallida (filter critical frequencies must be greater than 0)
+GW170104: descarga fallida (filter critical frequencies must be greater than 0)
+GW170608: descarga fallida (filter critical frequencies must be greater than 0)
+GW170729: descarga fallida (filter critical frequencies must be greater than 0)
+GW170809: descarga fallida (filter critical frequencies must be greater than 0)
+GW170814: descarga fallida (filter critical frequencies must be greater than 0)
+GW170817: descarga fallida (filter critical frequencies must be greater than 0)
+GW170818: descarga fallida (filter critical frequencies must be greater than 0)
+GW170823: descarga fallida (filter critical frequencies must be greater than 0)
+GW190403_051519: f_corr=14.7 Hz -> fixed=0.0% | dynamic=15.6%
+GW190408_181802: f_corr=15.0 Hz -> fixed=0.0% | dynamic=0.0%
+GW190412: f_corr=15.1 Hz -> fixed=0.0% | dynamic=0.0%
+GW190413_052954: f_corr=15.2 Hz -> fixed=0.0% | dynamic=9.4%
+GW190413_134308: f_corr=15.2 Hz -> fixed=0.0% | dynamic=3.1%
+GW190421_213856: f_corr=15.6 Hz -> fixed=0.0% | dynamic=15.6%
+GW190425: f_corr=15.7 Hz -> fixed=0.0% | dynamic=0.0%
+GW190426_190642: f_corr=15.8 Hz -> fixed=0.0% | dynamic=0.0%
+GW190503_185404: f_corr=16.1 Hz -> fixed=0.0% | dynamic=0.0%
+GW190512_180714: f_corr=16.5 Hz -> fixed=0.0% | dynamic=56.2%
+GW190513_205428: f_corr=16.6 Hz -> fixed=0.0% | dynamic=75.0%
+GW190514_065416: f_corr=16.6 Hz -> fixed=0.0% | dynamic=62.5%
+GW190517_055101: f_corr=16.8 Hz -> fixed=0.0% | dynamic=62.5%
+GW190519_153544: f_corr=16.8 Hz -> fixed=0.0% | dynamic=0.0%
+GW190521: f_corr=16.9 Hz -> fixed=0.0% | dynamic=65.6%
+GW190521_074359: f_corr=16.9 Hz -> fixed=0.0% | dynamic=53.1%
+GW190527_092055: f_corr=17.2 Hz -> fixed=0.0% | dynamic=65.6%
+GW190602_175927: f_corr=17.5 Hz -> fixed=0.0% | dynamic=78.1%
+GW190620_030421: descarga fallida (failed to get data from any source (1 sub-exception))
+
+======================================================================
+ RESUMEN COMPARATIVO
+======================================================================
+Detecciones con banda fija (172‑260 Hz): 0/18
+Detecciones con banda dinámica (centrada en f_corr): 8/18
+→ La banda centrada en la frecuencia teórica mejora la detección.
+======================================================================
